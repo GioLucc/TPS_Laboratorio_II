@@ -39,7 +39,7 @@ namespace MiCalculadora
 
         private void buttonExecute_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("¿Porqué me tocas?");
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -60,8 +60,18 @@ namespace MiCalculadora
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult rta = MessageBox.Show("¿Está seguro que desea salir?", "Atención",
-                MessageBoxButtons.YesNo,MessageBoxIcon.Question,
+                MessageBoxButtons.YesNo,MessageBoxIcon.Warning,
                 MessageBoxDefaultButton.Button2);
+
+            if(rta == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+                MessageBox.Show("¡Sigue corriendo la aplicación!","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
     }
 }

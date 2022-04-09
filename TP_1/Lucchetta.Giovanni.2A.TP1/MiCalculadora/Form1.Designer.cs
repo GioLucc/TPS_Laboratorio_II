@@ -39,7 +39,7 @@ namespace MiCalculadora
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.buttonConvDecimal = new System.Windows.Forms.Button();
-            this.gayelquelee = new System.Windows.Forms.ListBox();
+            this.x = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -145,17 +145,17 @@ namespace MiCalculadora
             this.buttonConvDecimal.UseVisualStyleBackColor = false;
             this.buttonConvDecimal.Click += new System.EventHandler(this.buttonConvDecimal_Click);
             // 
-            // gayelquelee
+            // x
             // 
-            this.gayelquelee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(58)))), ((int)(((byte)(114)))));
-            this.gayelquelee.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gayelquelee.ForeColor = System.Drawing.Color.White;
-            this.gayelquelee.FormattingEnabled = true;
-            this.gayelquelee.ItemHeight = 28;
-            this.gayelquelee.Location = new System.Drawing.Point(578, 53);
-            this.gayelquelee.Name = "gayelquelee";
-            this.gayelquelee.Size = new System.Drawing.Size(205, 312);
-            this.gayelquelee.TabIndex = 9;
+            this.x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(58)))), ((int)(((byte)(114)))));
+            this.x.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.x.ForeColor = System.Drawing.Color.White;
+            this.x.FormattingEnabled = true;
+            this.x.ItemHeight = 28;
+            this.x.Location = new System.Drawing.Point(578, 53);
+            this.x.Name = "x";
+            this.x.Size = new System.Drawing.Size(205, 312);
+            this.x.TabIndex = 9;
             // 
             // label1
             // 
@@ -178,7 +178,7 @@ namespace MiCalculadora
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(795, 417);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gayelquelee);
+            this.Controls.Add(this.x);
             this.Controls.Add(this.buttonConvDecimal);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
@@ -209,7 +209,7 @@ namespace MiCalculadora
         private System.Windows.Forms.ComboBox comboBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button buttonConvDecimal;
-        private System.Windows.Forms.ListBox gayelquelee;
+        private System.Windows.Forms.ListBox x;
         private System.Windows.Forms.Label label1;
     }
 }
