@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Operando
+    public class Operando
     {
         private double numero;
 
@@ -14,7 +14,7 @@ namespace Entidades
         {
             set
             {
-               this.numero = ValidarOperando(value);
+                this.numero = ValidarOperando(value);
             }
         }
 
@@ -44,9 +44,9 @@ namespace Entidades
 
         private bool EsBinario(string binario)
         {
-            bool binaryValidation = true;
+                                     bool binaryValidation = true;
 
-            for(int i = 0; i < binario.Length; i++)
+            for (int i = 0; i < binario.Length; i++)
             {
                 if (binario[i] != 0 || binario[i] != 1)
                 {
@@ -54,10 +54,54 @@ namespace Entidades
                     break;
                 }
             }
-           
+
             return binaryValidation;
         }
+
+        /// visibildiad - comportamiento - retorno - operator (+,-,/,*,string,int,double,etc...) { }
+        /// public      -       static   - bool    - operator - +
+        /// private     -                - int     - operator - -
+        /// protected   -                - string  - operator - /, *, string,int,double etc...
+
+
+        public static double operator +(Operando n1, Operando n2)
+        {
+            double resultado;
+
+            resultado = n1.numero + n2.numero;
+
+            return resultado;
+        }
+        public static double operator -(Operando n1, Operando n2)
+        {
+            double resultado;
+
+            resultado = n1.numero - n2.numero;
+
+            return resultado;
+        }
+        public static double operator *(Operando n1, Operando n2)
+        {
+            double resultado;
+
+            resultado = n1.numero * n2.numero;
+
+            return resultado;
+        }
+        public static double operator /(Operando n1, Operando n2)
+        {
+            double resultado = double.MinValue;
+
+            if(n2.numero > 0)
+            {
+                resultado = n1.numero / n2.numero;
+            }
+
+            return resultado;
+        }
+
 
 
     }
 }
+
