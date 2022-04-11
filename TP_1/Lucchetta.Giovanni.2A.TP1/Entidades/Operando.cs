@@ -44,7 +44,7 @@ namespace Entidades
 
         private bool EsBinario(string binario)
         {
-                                     bool binaryValidation = true;
+            bool binaryValidation = true;
 
             for (int i = 0; i < binario.Length; i++)
             {
@@ -90,7 +90,7 @@ namespace Entidades
         }
         public static double operator /(Operando n1, Operando n2)
         {
-            double resultado = double.MinValue;
+            double resultado = 0;
 
             if(n2.numero > 0)
             {

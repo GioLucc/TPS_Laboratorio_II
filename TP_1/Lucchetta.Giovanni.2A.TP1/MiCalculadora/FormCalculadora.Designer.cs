@@ -31,13 +31,13 @@ namespace MiCalculadora
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculadora));
             this.txtNumero2 = new System.Windows.Forms.TextBox();
-            this.buttonExecute = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonConvBinary = new System.Windows.Forms.Button();
+            this.btnOperar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnConvertirABinario = new System.Windows.Forms.Button();
             this.cmbOperador = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.buttonConvDecimal = new System.Windows.Forms.Button();
+            this.btnConvertirADecimal = new System.Windows.Forms.Button();
             this.lstOperaciones = new System.Windows.Forms.ListBox();
             this.lblResultado = new System.Windows.Forms.Label();
             this.txtNumero1 = new System.Windows.Forms.TextBox();
@@ -53,58 +53,58 @@ namespace MiCalculadora
             this.txtNumero2.Size = new System.Drawing.Size(175, 54);
             this.txtNumero2.TabIndex = 1;
             // 
-            // buttonExecute
+            // btnOperar
             // 
-            this.buttonExecute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonExecute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonExecute.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonExecute.ForeColor = System.Drawing.Color.White;
-            this.buttonExecute.Location = new System.Drawing.Point(42, 239);
-            this.buttonExecute.Name = "buttonExecute";
-            this.buttonExecute.Size = new System.Drawing.Size(159, 51);
-            this.buttonExecute.TabIndex = 2;
-            this.buttonExecute.Text = "Operar";
-            this.buttonExecute.UseVisualStyleBackColor = false;
-            this.buttonExecute.Click += new System.EventHandler(this.buttonExecute_Click);
+            this.btnOperar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOperar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOperar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOperar.ForeColor = System.Drawing.Color.White;
+            this.btnOperar.Location = new System.Drawing.Point(42, 239);
+            this.btnOperar.Name = "btnOperar";
+            this.btnOperar.Size = new System.Drawing.Size(159, 51);
+            this.btnOperar.TabIndex = 2;
+            this.btnOperar.Text = "Operar";
+            this.btnOperar.UseVisualStyleBackColor = false;
+            this.btnOperar.Click += new System.EventHandler(this.buttonExecute_Click);
             // 
-            // buttonClear
+            // btnLimpiar
             // 
-            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonClear.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(226, 239);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(159, 51);
-            this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "Limpiar";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLimpiar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(226, 239);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(159, 51);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // buttonClose
+            // btnCerrar
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonClose.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(396, 239);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(159, 51);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.Text = "Cerrar";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(396, 239);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(159, 51);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // buttonConvBinary
+            // btnConvertirABinario
             // 
-            this.buttonConvBinary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonConvBinary.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConvBinary.ForeColor = System.Drawing.Color.White;
-            this.buttonConvBinary.Location = new System.Drawing.Point(42, 312);
-            this.buttonConvBinary.Name = "buttonConvBinary";
-            this.buttonConvBinary.Size = new System.Drawing.Size(241, 53);
-            this.buttonConvBinary.TabIndex = 5;
-            this.buttonConvBinary.Text = "Convertir a Binario";
-            this.buttonConvBinary.UseVisualStyleBackColor = false;
-            this.buttonConvBinary.Click += new System.EventHandler(this.buttonConvBinary_Click);
+            this.btnConvertirABinario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnConvertirABinario.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConvertirABinario.ForeColor = System.Drawing.Color.White;
+            this.btnConvertirABinario.Location = new System.Drawing.Point(42, 312);
+            this.btnConvertirABinario.Name = "btnConvertirABinario";
+            this.btnConvertirABinario.Size = new System.Drawing.Size(241, 53);
+            this.btnConvertirABinario.TabIndex = 5;
+            this.btnConvertirABinario.Text = "Convertir a Binario";
+            this.btnConvertirABinario.UseVisualStyleBackColor = false;
+            this.btnConvertirABinario.Click += new System.EventHandler(this.buttonConvBinary_Click);
             // 
             // cmbOperador
             // 
@@ -121,18 +121,18 @@ namespace MiCalculadora
             this.cmbOperador.Size = new System.Drawing.Size(108, 67);
             this.cmbOperador.TabIndex = 7;
             // 
-            // buttonConvDecimal
+            // btnConvertirADecimal
             // 
-            this.buttonConvDecimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonConvDecimal.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonConvDecimal.ForeColor = System.Drawing.Color.White;
-            this.buttonConvDecimal.Location = new System.Drawing.Point(314, 312);
-            this.buttonConvDecimal.Name = "buttonConvDecimal";
-            this.buttonConvDecimal.Size = new System.Drawing.Size(241, 53);
-            this.buttonConvDecimal.TabIndex = 8;
-            this.buttonConvDecimal.Text = "Convertir a Decimal";
-            this.buttonConvDecimal.UseVisualStyleBackColor = false;
-            this.buttonConvDecimal.Click += new System.EventHandler(this.buttonConvDecimal_Click);
+            this.btnConvertirADecimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnConvertirADecimal.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnConvertirADecimal.ForeColor = System.Drawing.Color.White;
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(314, 312);
+            this.btnConvertirADecimal.Name = "btnConvertirADecimal";
+            this.btnConvertirADecimal.Size = new System.Drawing.Size(241, 53);
+            this.btnConvertirADecimal.TabIndex = 8;
+            this.btnConvertirADecimal.Text = "Convertir a Decimal";
+            this.btnConvertirADecimal.UseVisualStyleBackColor = false;
+            this.btnConvertirADecimal.Click += new System.EventHandler(this.buttonConvDecimal_Click);
             // 
             // lstOperaciones
             // 
@@ -145,6 +145,7 @@ namespace MiCalculadora
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(205, 312);
             this.lstOperaciones.TabIndex = 9;
+            this.lstOperaciones.SelectedIndexChanged += new System.EventHandler(this.lstOperaciones_SelectedIndexChanged);
             // 
             // lblResultado
             // 
@@ -157,6 +158,7 @@ namespace MiCalculadora
             this.lblResultado.Size = new System.Drawing.Size(513, 57);
             this.lblResultado.TabIndex = 10;
             this.lblResultado.Text = "0";
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // txtNumero1
             // 
@@ -179,12 +181,12 @@ namespace MiCalculadora
             this.Controls.Add(this.txtNumero1);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lstOperaciones);
-            this.Controls.Add(this.buttonConvDecimal);
+            this.Controls.Add(this.btnConvertirADecimal);
             this.Controls.Add(this.cmbOperador);
-            this.Controls.Add(this.buttonConvBinary);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.buttonExecute);
+            this.Controls.Add(this.btnConvertirABinario);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.txtNumero2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -203,13 +205,13 @@ namespace MiCalculadora
         #endregion
 
         private System.Windows.Forms.TextBox txtNumero2;
-        private System.Windows.Forms.Button buttonExecute;
-        private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button buttonConvBinary;
+        private System.Windows.Forms.Button btnOperar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnConvertirABinario;
         private System.Windows.Forms.ComboBox cmbOperador;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button buttonConvDecimal;
+        private System.Windows.Forms.Button btnConvertirADecimal;
         private System.Windows.Forms.ListBox lstOperaciones;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.TextBox txtNumero1;

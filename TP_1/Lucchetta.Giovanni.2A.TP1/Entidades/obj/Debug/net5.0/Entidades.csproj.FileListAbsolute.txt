@@ -3,3 +3,10 @@ C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0
 C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
 C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
 C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\bin\Debug\net5.0\ref\Entidades.dll
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\giova\source\repos\Lucchetta.Giovanni.2A.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
