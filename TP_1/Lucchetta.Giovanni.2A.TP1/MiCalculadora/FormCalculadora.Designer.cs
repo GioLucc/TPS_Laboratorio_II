@@ -47,10 +47,10 @@ namespace MiCalculadora
             // 
             this.txtNumero2.BackColor = System.Drawing.Color.White;
             this.txtNumero2.Font = new System.Drawing.Font("Segoe UI", 32.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNumero2.Location = new System.Drawing.Point(380, 97);
+            this.txtNumero2.Location = new System.Drawing.Point(328, 99);
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(175, 54);
+            this.txtNumero2.Size = new System.Drawing.Size(141, 54);
             this.txtNumero2.TabIndex = 1;
             // 
             // btnOperar
@@ -59,9 +59,9 @@ namespace MiCalculadora
             this.btnOperar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnOperar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnOperar.ForeColor = System.Drawing.Color.White;
-            this.btnOperar.Location = new System.Drawing.Point(42, 239);
+            this.btnOperar.Location = new System.Drawing.Point(42, 208);
             this.btnOperar.Name = "btnOperar";
-            this.btnOperar.Size = new System.Drawing.Size(159, 51);
+            this.btnOperar.Size = new System.Drawing.Size(117, 51);
             this.btnOperar.TabIndex = 2;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = false;
@@ -72,9 +72,9 @@ namespace MiCalculadora
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(226, 239);
+            this.btnLimpiar.Location = new System.Drawing.Point(200, 208);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(159, 51);
+            this.btnLimpiar.Size = new System.Drawing.Size(117, 51);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -85,9 +85,9 @@ namespace MiCalculadora
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnCerrar.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(396, 239);
+            this.btnCerrar.Location = new System.Drawing.Point(352, 208);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(159, 51);
+            this.btnCerrar.Size = new System.Drawing.Size(117, 51);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -98,9 +98,9 @@ namespace MiCalculadora
             this.btnConvertirABinario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnConvertirABinario.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConvertirABinario.ForeColor = System.Drawing.Color.White;
-            this.btnConvertirABinario.Location = new System.Drawing.Point(42, 312);
+            this.btnConvertirABinario.Location = new System.Drawing.Point(42, 282);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
-            this.btnConvertirABinario.Size = new System.Drawing.Size(241, 53);
+            this.btnConvertirABinario.Size = new System.Drawing.Size(193, 53);
             this.btnConvertirABinario.TabIndex = 5;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = false;
@@ -108,17 +108,18 @@ namespace MiCalculadora
             // 
             // cmbOperador
             // 
-            this.cmbOperador.Font = new System.Drawing.Font("Segoe UI", 32.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOperador.Font = new System.Drawing.Font("Segoe UI", 25.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbOperador.FormattingEnabled = true;
-            this.cmbOperador.ItemHeight = 59;
+            this.cmbOperador.ItemHeight = 46;
             this.cmbOperador.Items.AddRange(new object[] {
             "-",
             "+",
             "*",
             "/"});
-            this.cmbOperador.Location = new System.Drawing.Point(246, 86);
+            this.cmbOperador.Location = new System.Drawing.Point(210, 99);
             this.cmbOperador.Name = "cmbOperador";
-            this.cmbOperador.Size = new System.Drawing.Size(108, 67);
+            this.cmbOperador.Size = new System.Drawing.Size(95, 54);
             this.cmbOperador.TabIndex = 7;
             // 
             // btnConvertirADecimal
@@ -126,9 +127,9 @@ namespace MiCalculadora
             this.btnConvertirADecimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnConvertirADecimal.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConvertirADecimal.ForeColor = System.Drawing.Color.White;
-            this.btnConvertirADecimal.Location = new System.Drawing.Point(314, 312);
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(266, 282);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
-            this.btnConvertirADecimal.Size = new System.Drawing.Size(241, 53);
+            this.btnConvertirADecimal.Size = new System.Drawing.Size(203, 53);
             this.btnConvertirADecimal.TabIndex = 8;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = false;
@@ -136,14 +137,14 @@ namespace MiCalculadora
             // 
             // lstOperaciones
             // 
-            this.lstOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(58)))), ((int)(((byte)(114)))));
+            this.lstOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lstOperaciones.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lstOperaciones.ForeColor = System.Drawing.Color.White;
+            this.lstOperaciones.ForeColor = System.Drawing.Color.Black;
             this.lstOperaciones.FormattingEnabled = true;
             this.lstOperaciones.ItemHeight = 28;
-            this.lstOperaciones.Location = new System.Drawing.Point(578, 53);
+            this.lstOperaciones.Location = new System.Drawing.Point(519, 25);
             this.lstOperaciones.Name = "lstOperaciones";
-            this.lstOperaciones.Size = new System.Drawing.Size(205, 312);
+            this.lstOperaciones.Size = new System.Drawing.Size(264, 340);
             this.lstOperaciones.TabIndex = 9;
             this.lstOperaciones.SelectedIndexChanged += new System.EventHandler(this.lstOperaciones_SelectedIndexChanged);
             // 
@@ -152,22 +153,23 @@ namespace MiCalculadora
             this.lblResultado.BackColor = System.Drawing.Color.Transparent;
             this.lblResultado.Font = new System.Drawing.Font("Roboto Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(42, 26);
+            this.lblResultado.Location = new System.Drawing.Point(42, 25);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblResultado.Size = new System.Drawing.Size(513, 57);
+            this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblResultado.Size = new System.Drawing.Size(427, 57);
             this.lblResultado.TabIndex = 10;
             this.lblResultado.Text = "0";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // txtNumero1
             // 
             this.txtNumero1.BackColor = System.Drawing.Color.White;
             this.txtNumero1.Font = new System.Drawing.Font("Segoe UI", 32.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNumero1.Location = new System.Drawing.Point(42, 97);
+            this.txtNumero1.Location = new System.Drawing.Point(42, 99);
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(175, 54);
+            this.txtNumero1.Size = new System.Drawing.Size(141, 54);
             this.txtNumero1.TabIndex = 11;
             // 
             // FormCalculadora
@@ -177,7 +179,7 @@ namespace MiCalculadora
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(795, 417);
+            this.ClientSize = new System.Drawing.Size(796, 389);
             this.Controls.Add(this.txtNumero1);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lstOperaciones);

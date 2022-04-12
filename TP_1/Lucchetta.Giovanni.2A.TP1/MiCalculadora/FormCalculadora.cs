@@ -14,6 +14,7 @@ namespace MiCalculadora
     public partial class FormCalculadora : Form
     {
         double resultado;
+        string lstOperation;
 
         public FormCalculadora()
         {
@@ -47,9 +48,15 @@ namespace MiCalculadora
 
             this.resultado = (Calculadora.Operar(primerNumero, segundoNumero, operando));
 
+            if(operando == ' ')
+            {
+                operando = '+';
+            }
+
             lblResultado.Text = this.resultado.ToString();
 
-            MessageBox.Show("El resultado de la suma fue: "+this.resultado);
+            lstOperation = txtNumero1.Text + " " + operando + " " + txtNumero2.Text + " = " + this.resultado;
+            lstOperaciones.Items.Add(lstOperation);
 
             //resultadoString =this.resultado.ToString();
 

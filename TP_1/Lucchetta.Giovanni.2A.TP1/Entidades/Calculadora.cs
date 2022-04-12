@@ -37,6 +37,7 @@ namespace Entidades
                         break;
 
                     case '/':
+
                         resultado = num1 / num2;
                         break;
 
@@ -47,7 +48,7 @@ namespace Entidades
 
             }
 
-            return resultado;
+            return Math.Round(resultado,2);
         }
     }
 }
