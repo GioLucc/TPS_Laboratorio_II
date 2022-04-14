@@ -13,9 +13,6 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
-        double resultado;
-        string lstOperation;
-
         public FormCalculadora()
         {
             InitializeComponent();
@@ -23,7 +20,11 @@ namespace MiCalculadora
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.cmbOperador.Items.Add(" ");
+            this.cmbOperador.Items.Add("+");
+            this.cmbOperador.Items.Add("-");
+            this.cmbOperador.Items.Add("*");
+            this.cmbOperador.Items.Add("/");
         }
 
         private void buttonConvBinary_Click(object sender, EventArgs e)
@@ -36,34 +37,53 @@ namespace MiCalculadora
             Close();
         }
 
-        private void buttonExecute_Click(object sender, EventArgs e)
+        private string ValidarTextBoxs(string txtBox)
         {
-            char operando;
-            //string resultadoString;
+            double retorno = 0;
 
-            Operando primerNumero = new Operando(txtNumero1.Text);
-            Operando segundoNumero = new Operando(txtNumero2.Text);
-
-            char.TryParse(cmbOperador.Text, out operando);
-
-            this.resultado = (Calculadora.Operar(primerNumero, segundoNumero, operando));
-
-            if(operando == ' ')
+            if (!double.TryParse(txtBox, out retorno))
             {
-                operando = '+';
+                retorno = 0;
+                txtBox = retorno.ToString();
             }
 
-            lblResultado.Text = this.resultado.ToString();
+            return txtBox;
+        }
+        private double Operar(string numero1, string numero2, string operador)
+        {
+            Operando primerNumero = new Operando(numero1);
+            Operando segundoNumero = new Operando(numero2);
+            char convOperador;
 
-            lstOperation = txtNumero1.Text + " " + operando + " " + txtNumero2.Text + " = " + this.resultado;
-            lstOperaciones.Items.Add(lstOperation);
+            char.TryParse(operador, out convOperador);
 
-            //resultadoString =this.resultado.ToString();
+            return Calculadora.Operar(primerNumero, segundoNumero, convOperador);
+        }
 
+        private void btnOperar_Click(object sender, EventArgs e)
+        {
+            string resultado;
+            string mensaje;
+            string operador = this.cmbOperador.Text;
 
-            //primerNumero = this.txtNumero1.Text;
-            //segundoNumero = this.txtNumero2.Text;
-            //MessageBox.Show("¿Porqué me tocas? \nBueno no importa ingresaste esto: "+ firstString + ", y esto: "+ secondString);
+            resultado = Convert.ToString(Operar(this.txtNumero1.Text, this.txtNumero2.Text, operador));
+
+            if(string.IsNullOrEmpty(operador))
+            {
+                operador = "+";
+            }
+            else
+            {
+                operador = this.cmbOperador.Text;
+            }
+
+            this.txtNumero1.Text = ValidarTextBoxs(this.txtNumero1.Text);
+            this.txtNumero2.Text = ValidarTextBoxs(this.txtNumero2.Text);
+
+            mensaje = this.txtNumero1.Text + " " + operador + " " + this.txtNumero2.Text + " = " + resultado;
+            this.lblResultado.Text = resultado;
+            this.lstOperaciones.Items.Add(mensaje);
+
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -75,7 +95,6 @@ namespace MiCalculadora
         {
 
         }
-
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -104,17 +123,28 @@ namespace MiCalculadora
             lblResultado.Text = "0";
             txtNumero1.Text = "";
             txtNumero2.Text = "";
-            cmbOperador.Text = "";
+            this.cmbOperador.Text = " ";
         }
 
-        private void lstOperaciones_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstOperaciones.Text = this.resultado.ToString();
-        }
+        //private void txtNumero1_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && (e.KeyChar != '.'))
+        //    {
+        //        e.Handled = true;
+        //        MessageBox.Show("¡ERROR - No puedes ingresar letras - ERROR!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
 
-        private void lblResultado_Click(object sender, EventArgs e)
-        {
-            lblResultado.Text = this.resultado.ToString();
-        }
+        //}
+
+        //private void txtNumero2_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && (e.KeyChar != '.'))
+        //    {
+        //        e.Handled = true;
+        //        MessageBox.Show("¡ERROR - No puedes ingresar letras - ERROR!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+
     }
 }

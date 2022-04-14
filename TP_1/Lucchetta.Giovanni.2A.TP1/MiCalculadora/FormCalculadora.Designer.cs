@@ -45,13 +45,14 @@ namespace MiCalculadora
             // 
             // txtNumero2
             // 
-            this.txtNumero2.BackColor = System.Drawing.Color.White;
-            this.txtNumero2.Font = new System.Drawing.Font("Segoe UI", 32.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNumero2.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNumero2.Font = new System.Drawing.Font("Segoe UI", 23.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNumero2.Location = new System.Drawing.Point(328, 99);
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(141, 54);
             this.txtNumero2.TabIndex = 1;
+           // this.txtNumero2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero2_KeyPress);
             // 
             // btnOperar
             // 
@@ -65,7 +66,7 @@ namespace MiCalculadora
             this.btnOperar.TabIndex = 2;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = false;
-            this.btnOperar.Click += new System.EventHandler(this.buttonExecute_Click);
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // btnLimpiar
             // 
@@ -112,11 +113,6 @@ namespace MiCalculadora
             this.cmbOperador.Font = new System.Drawing.Font("Segoe UI", 25.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbOperador.FormattingEnabled = true;
             this.cmbOperador.ItemHeight = 46;
-            this.cmbOperador.Items.AddRange(new object[] {
-            "-",
-            "+",
-            "*",
-            "/"});
             this.cmbOperador.Location = new System.Drawing.Point(210, 99);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(95, 54);
@@ -146,7 +142,6 @@ namespace MiCalculadora
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(264, 340);
             this.lstOperaciones.TabIndex = 9;
-            this.lstOperaciones.SelectedIndexChanged += new System.EventHandler(this.lstOperaciones_SelectedIndexChanged);
             // 
             // lblResultado
             // 
@@ -160,17 +155,17 @@ namespace MiCalculadora
             this.lblResultado.TabIndex = 10;
             this.lblResultado.Text = "0";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // txtNumero1
             // 
-            this.txtNumero1.BackColor = System.Drawing.Color.White;
-            this.txtNumero1.Font = new System.Drawing.Font("Segoe UI", 32.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNumero1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNumero1.Font = new System.Drawing.Font("Segoe UI", 23.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNumero1.Location = new System.Drawing.Point(42, 99);
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(141, 54);
             this.txtNumero1.TabIndex = 11;
+           // this.txtNumero1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero1_KeyPress);
             // 
             // FormCalculadora
             // 
@@ -191,6 +186,7 @@ namespace MiCalculadora
             this.Controls.Add(this.btnOperar);
             this.Controls.Add(this.txtNumero2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
