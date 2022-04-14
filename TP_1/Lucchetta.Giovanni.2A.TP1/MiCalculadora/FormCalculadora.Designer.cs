@@ -51,8 +51,7 @@ namespace MiCalculadora
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(141, 54);
-            this.txtNumero2.TabIndex = 1;
-           // this.txtNumero2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero2_KeyPress);
+            this.txtNumero2.TabIndex = 2;
             // 
             // btnOperar
             // 
@@ -63,7 +62,7 @@ namespace MiCalculadora
             this.btnOperar.Location = new System.Drawing.Point(42, 208);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(117, 51);
-            this.btnOperar.TabIndex = 2;
+            this.btnOperar.TabIndex = 5;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = false;
             this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
@@ -76,7 +75,7 @@ namespace MiCalculadora
             this.btnLimpiar.Location = new System.Drawing.Point(200, 208);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(117, 51);
-            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.buttonClear_Click);
@@ -89,7 +88,7 @@ namespace MiCalculadora
             this.btnCerrar.Location = new System.Drawing.Point(352, 208);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(117, 51);
-            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.buttonClose_Click);
@@ -102,7 +101,7 @@ namespace MiCalculadora
             this.btnConvertirABinario.Location = new System.Drawing.Point(42, 282);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(193, 53);
-            this.btnConvertirABinario.TabIndex = 5;
+            this.btnConvertirABinario.TabIndex = 8;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = false;
             this.btnConvertirABinario.Click += new System.EventHandler(this.buttonConvBinary_Click);
@@ -116,7 +115,7 @@ namespace MiCalculadora
             this.cmbOperador.Location = new System.Drawing.Point(210, 99);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(95, 54);
-            this.cmbOperador.TabIndex = 7;
+            this.cmbOperador.TabIndex = 1;
             // 
             // btnConvertirADecimal
             // 
@@ -126,7 +125,7 @@ namespace MiCalculadora
             this.btnConvertirADecimal.Location = new System.Drawing.Point(266, 282);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(203, 53);
-            this.btnConvertirADecimal.TabIndex = 8;
+            this.btnConvertirADecimal.TabIndex = 9;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = false;
             this.btnConvertirADecimal.Click += new System.EventHandler(this.buttonConvDecimal_Click);
@@ -141,7 +140,7 @@ namespace MiCalculadora
             this.lstOperaciones.Location = new System.Drawing.Point(519, 25);
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(264, 340);
-            this.lstOperaciones.TabIndex = 9;
+            this.lstOperaciones.TabIndex = 4;
             // 
             // lblResultado
             // 
@@ -152,7 +151,7 @@ namespace MiCalculadora
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblResultado.Size = new System.Drawing.Size(427, 57);
-            this.lblResultado.TabIndex = 10;
+            this.lblResultado.TabIndex = 3;
             this.lblResultado.Text = "0";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -164,8 +163,7 @@ namespace MiCalculadora
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(141, 54);
-            this.txtNumero1.TabIndex = 11;
-           // this.txtNumero1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero1_KeyPress);
+            this.txtNumero1.TabIndex = 0;
             // 
             // FormCalculadora
             // 
