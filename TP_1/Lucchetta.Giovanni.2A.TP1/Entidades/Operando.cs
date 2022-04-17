@@ -33,6 +33,57 @@ namespace Entidades
             this.Numero = strNumero;
         }
 
+        public string BinarioDecimal(string binario)
+        {
+            string resultado = "¡Valor invalido!";
+
+            if (EsBinario(binario))
+            {
+                int numeroConvertido = 0;
+                char[] cadenaAlReves = binario.ToArray();
+                Array.Reverse(cadenaAlReves);
+
+                for (int i = 0; i < binario.Length; i++)
+                {
+                    if (cadenaAlReves[i] == '1')
+                    {
+                        numeroConvertido += (int)(Math.Pow(2, i));
+
+                    }
+                }
+                if (numeroConvertido > 0)
+                {
+                    resultado = numeroConvertido.ToString();
+                }
+            }
+            return resultado;
+        }
+
+        public string DecimalBinario(string numero)
+        {
+            int resto;
+            int valor;
+            string resultado = "";
+
+            if (int.TryParse(numero, out valor) && valor > 0)
+            {
+                while (valor > 0)
+                {
+                    resto = valor % 2;
+                    valor = valor / 2;
+
+                    resultado = resto.ToString() + resultado;
+                }
+            }
+            else
+            {
+                resultado = "¡Valor invalido!";
+            }
+
+
+            return resultado;
+        }
+
         private double ValidarOperando(string strNumero)
         {
             double strValidado = 0;
@@ -58,7 +109,9 @@ namespace Entidades
             return binaryValidation;
         }
 
-        /// visibildiad - comportamiento - retorno - operator (+,-,/,*,string,int,double,etc...) { }
+
+
+        /// visibildiad - comportamiento - resultado - operator (+,-,/,*,string,int,double,etc...) { }
         /// public      -       static   - bool    - operator - +
         /// private     -                - int     - operator - -
         /// protected   -                - string  - operator - /, *, string,int,double etc...

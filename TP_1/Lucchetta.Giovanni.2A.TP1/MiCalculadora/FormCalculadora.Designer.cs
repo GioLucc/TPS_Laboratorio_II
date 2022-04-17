@@ -36,7 +36,6 @@ namespace MiCalculadora
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnConvertirABinario = new System.Windows.Forms.Button();
             this.cmbOperador = new System.Windows.Forms.ComboBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnConvertirADecimal = new System.Windows.Forms.Button();
             this.lstOperaciones = new System.Windows.Forms.ListBox();
             this.lblResultado = new System.Windows.Forms.Label();
@@ -206,7 +205,6 @@ namespace MiCalculadora
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnConvertirABinario;
         private System.Windows.Forms.ComboBox cmbOperador;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnConvertirADecimal;
         private System.Windows.Forms.ListBox lstOperaciones;
         private System.Windows.Forms.Label lblResultado;
