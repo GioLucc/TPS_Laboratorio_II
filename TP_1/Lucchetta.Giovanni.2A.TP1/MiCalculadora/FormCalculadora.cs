@@ -27,12 +27,16 @@ namespace MiCalculadora
             this.cmbOperador.Items.Add("/");
         }
 
-        private void buttonConvBinary_Click(object sender, EventArgs e)
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -86,14 +90,9 @@ namespace MiCalculadora
 
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-        }
-
-        private void buttonConvDecimal_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

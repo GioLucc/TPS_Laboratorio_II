@@ -84,6 +84,12 @@ namespace Entidades
             return resultado;
         }
 
+        public string DecimalBinario(double numero)
+        {
+            return DecimalBinario(numero.ToString());            
+        }
+
+
         private double ValidarOperando(string strNumero)
         {
             double strValidado = 0;
