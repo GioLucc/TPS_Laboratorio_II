@@ -132,19 +132,19 @@ namespace MiCalculadora
             // lstOperaciones
             // 
             this.lstOperaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lstOperaciones.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lstOperaciones.Font = new System.Drawing.Font("Segoe UI Semibold", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lstOperaciones.ForeColor = System.Drawing.Color.Black;
             this.lstOperaciones.FormattingEnabled = true;
-            this.lstOperaciones.ItemHeight = 28;
+            this.lstOperaciones.ItemHeight = 25;
             this.lstOperaciones.Location = new System.Drawing.Point(519, 25);
             this.lstOperaciones.Name = "lstOperaciones";
-            this.lstOperaciones.Size = new System.Drawing.Size(264, 340);
+            this.lstOperaciones.Size = new System.Drawing.Size(264, 329);
             this.lstOperaciones.TabIndex = 4;
             // 
             // lblResultado
             // 
             this.lblResultado.BackColor = System.Drawing.Color.Transparent;
-            this.lblResultado.Font = new System.Drawing.Font("Roboto Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblResultado.Font = new System.Drawing.Font("Roboto Black", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblResultado.ForeColor = System.Drawing.Color.White;
             this.lblResultado.Location = new System.Drawing.Point(42, 25);
             this.lblResultado.Name = "lblResultado";
