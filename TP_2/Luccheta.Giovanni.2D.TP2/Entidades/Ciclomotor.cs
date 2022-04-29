@@ -8,6 +8,9 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
+        
+
+
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color)
         {
         }
@@ -15,12 +18,9 @@ namespace Entidades
         /// <summary>
         /// Ciclomotor son 'Chico'
         /// </summary>
-        protected short Tamanio
+        public ETamanio Tamanio
         {
-            get
-            {
-                return 0;
-            }
+            get { return base.Tamanio; }
         }
 
         private override sealed string Mostrar()

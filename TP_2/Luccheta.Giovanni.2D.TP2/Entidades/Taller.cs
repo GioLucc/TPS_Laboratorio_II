@@ -9,10 +9,10 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Taller
+    sealed class Taller
     {
-        List<Vehiculo> vehiculos;
-        int espacioDisponible;
+        private List<Vehiculo> vehiculos;
+        private int espacioDisponible;
         public enum ETipo
         {
             Moto, Automovil, Camioneta, Todos
@@ -21,7 +21,7 @@ namespace Entidades
         #region "Constructores"
         private Taller()
         {
-            this.vehiculos = new List<Vehiculo>();
+            vehiculos = new List<Vehiculo>();
         }
         public Taller(int espacioDisponible)
         {
@@ -87,7 +87,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
                     return taller;
@@ -104,7 +104,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller)
+            foreach (Vehiculo v in taller.vehiculos)
             {
                 if (v == vehiculo)
                 {

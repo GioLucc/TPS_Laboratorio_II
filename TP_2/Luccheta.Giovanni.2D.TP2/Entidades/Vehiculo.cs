@@ -9,19 +9,20 @@ namespace Entidades
     /// <summary>
     /// La clase Vehiculo no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
-    protected class Vehiculo
+    abstract class Vehiculo
     {
-        protected enum EMarca
+        private EMarca marca;
+        private string chasis;
+        private ConsoleColor color;
+
+        public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
         }
-        protected enum ETamanio
+        public enum ETamanio
         {
             Chico, Mediano, Grande
         }
-        protected EMarca marca;
-        public chasis;
-        protected ConsoleColor color;
 
         public Vehiculo(EMarca marca, string chasis, ConsoleColor color)
         {
@@ -33,27 +34,30 @@ namespace Entidades
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        abstract ETamanio Tamanio { get; set; }
+        public ETamanio Tamanio 
+        { 
+            get { return this.Tamanio; } 
+        }
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
         /// <returns></returns>
-        sealed string Mostrar()
-        {
-            return this;
-        }
-
-        private static explicit operator string(Vehiculo p)
+        public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("CHASIS: {0}\r\n", p.chasis);
-            sb.AppendLine("MARCA : {0}\r\n", p.marca.ToString());
-            sb.AppendLine("COLOR : {0}\r\n", p.color.ToString());
+            sb.AppendLine($"CHASIS: {chasis}\n");
+            sb.AppendLine($"MARCA : {marca.ToString()}\n");
+            sb.AppendLine($"COLOR : {color.ToString()}\n");
             sb.AppendLine("---------------------");
 
-            return sb;
+            return sb.ToString();
+        }
+
+        public static explicit operator string(Vehiculo p)
+        {
+            return p.Mostrar();
         }
 
         /// <summary>
@@ -64,7 +68,16 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            return (v1.chasis == v2.chasis);
+            if (v1 is null && v2 is null)
+            {
+                if (v1.chasis == v2.chasis)
+                {
+                    return (v1.chasis == v2.chasis);
+                }
+            }
+            
+            return false;
+
         }
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
@@ -74,7 +87,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
-            return (v1.chasis == v2.chasis);
+            return !(v1.chasis == v2.chasis);
         }
     }
 }
