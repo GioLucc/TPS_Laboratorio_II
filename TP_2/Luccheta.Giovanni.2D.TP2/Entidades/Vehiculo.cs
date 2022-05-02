@@ -9,7 +9,7 @@ namespace Entidades
     /// <summary>
     /// La clase Vehiculo no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
-    abstract class Vehiculo
+    public abstract class Vehiculo
     {
         private EMarca marca;
         private string chasis;
@@ -34,22 +34,22 @@ namespace Entidades
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public ETamanio Tamanio 
-        { 
-            get { return this.Tamanio; } 
+        protected abstract ETamanio Tamanio 
+        {
+            get; 
         }
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
         /// <returns></returns>
-        public string Mostrar()
+        public virtual string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"CHASIS: {chasis}\n");
-            sb.AppendLine($"MARCA : {marca.ToString()}\n");
-            sb.AppendLine($"COLOR : {color.ToString()}\n");
+            sb.AppendLine($"CHASIS: {chasis}\r\n");
+            sb.AppendLine($"MARCA : {marca.ToString()}\r\n");
+            sb.AppendLine($"COLOR : {color.ToString()}\r\n");
             sb.AppendLine("---------------------");
 
             return sb.ToString();
@@ -68,7 +68,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            if (v1 is null && v2 is null)
+            if ( !(v1 is null) && !(v2 is null))
             {
                 if (v1.chasis == v2.chasis)
                 {

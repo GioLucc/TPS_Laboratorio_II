@@ -9,7 +9,7 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    sealed class Taller
+    public sealed class Taller
     {
         private List<Vehiculo> vehiculos;
         private int espacioDisponible;
@@ -23,7 +23,7 @@ namespace Entidades
         {
             vehiculos = new List<Vehiculo>();
         }
-        public Taller(int espacioDisponible)
+        public Taller(int espacioDisponible) : this ()
         {
             this.espacioDisponible = espacioDisponible;
         }
@@ -34,9 +34,9 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public override string ToString()
         {
-            return Taller.Listar(this, ETipo.Todos);
+            return this.Listar(this, ETipo.Todos);
         }
         #endregion
 
@@ -74,7 +74,7 @@ namespace Entidades
                 }
             }
 
-            return sb;
+            return sb.ToString();
         }
         #endregion
 

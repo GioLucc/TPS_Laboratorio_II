@@ -8,32 +8,30 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
-        
-
-
-        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color)
+        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(marca,chasis,color)
         {
+            
         }
         
         /// <summary>
         /// Ciclomotor son 'Chico'
         /// </summary>
-        public ETamanio Tamanio
+        protected override ETamanio Tamanio
         {
-            get { return base.Tamanio; }
+            get { return Vehiculo.ETamanio.Chico; }
         }
 
-        private override sealed string Mostrar()
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("CICLOMOTOR");
-            sb.AppendLine(this.Mostrar());
-            sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
+            Console.WriteLine(base.Mostrar());
+            sb.AppendLine($"TAMAÑO : {this.Tamanio}");
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
-            return sb;
+            return sb.ToString();
         }
     }
 }
