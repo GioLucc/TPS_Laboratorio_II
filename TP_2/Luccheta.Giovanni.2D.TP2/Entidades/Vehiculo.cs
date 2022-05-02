@@ -45,19 +45,20 @@ namespace Entidades
         /// <returns></returns>
         public virtual string Mostrar()
         {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine($"CHASIS: {chasis}\r\n");
-            sb.AppendLine($"MARCA : {marca.ToString()}\r\n");
-            sb.AppendLine($"COLOR : {color.ToString()}\r\n");
-            sb.AppendLine("---------------------");
-
-            return sb.ToString();
+            return (string)this;
         }
 
         public static explicit operator string(Vehiculo p)
         {
-            return p.Mostrar();
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"CHASIS: {p.chasis}\r\n");
+            sb.AppendLine($"MARCA : {p.marca.ToString()}\r\n");
+            sb.AppendLine($"COLOR : {p.color.ToString()}\r\n");
+            sb.AppendLine("---------------------");
+
+            return sb.ToString();
+
         }
 
         /// <summary>
@@ -68,16 +69,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            if ( !(v1 is null) && !(v2 is null))
-            {
-                if (v1.chasis == v2.chasis)
-                {
-                    return (v1.chasis == v2.chasis);
-                }
-            }
-            
-            return false;
-
+            return !(v1 is null) && !(v2 is null) && v1.chasis == v2.chasis;
         }
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
@@ -87,7 +79,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
-            return !(v1.chasis == v2.chasis);
+            return !(v1 == v2);
         }
     }
 }
